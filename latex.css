@@ -1,19 +1,44 @@
-table {
+* {
     font-family: mono;
 }
-tr {
-    display: block;
+ul, ol, dl, li, dt, dd {
+    margin: 0;
+    padding: 0;
 }
-table, thead, tbody, tfoot, td {
+ul > li, ol > li, dl > dt {
+    list-style: none;
+}
+dt:before {
+    content: '\\item['
+}
+dt:after {
+    content: '] '
+}
+dt, dd {
     display: inline;
+}
+dl {
+    white-space: pre-line;
+}
+dl:before {
+    content: '\\begin{description}';
+}
+dl:after {
+    content: '\\end{description}';
+}
+table:before {
+    content: '\\begin{tabular}';
+}
+table:after {
+    content: '\\end{tabular}';
 }
 table, thead, tbody, tfoot, tr, td {
     margin: 0;
     padding: 0;
 }
-td {
-    margin-right: -0.5em;
-}
 td:nth-child(n+2):before {
-    content: ',';
+    content: '&';
+}
+td:last-child:after {
+    content: '\\\\';
 }
