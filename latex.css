@@ -6,7 +6,7 @@ html, body {
     padding: 0;
 }
 html:before {
-    content: '\\documentclass{article}\\usepackage{graphicx}';
+    content: '\\documentclass{article}';
 }
 body:before {
     content: '\\begin{document}';
