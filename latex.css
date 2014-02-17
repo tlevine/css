@@ -1,6 +1,52 @@
 * {
     font-family: mono;
 }
+
+body:before {
+    content: '\\begin{document}';
+}
+body:after {
+    content: '\\end{document}';
+}
+
+h1, h2, h3, h4, h5 {
+    text-decoration: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+h1:before {
+    content: '\\section*{';
+}
+h1:after {
+    content: '} ';
+}
+h2:before {
+    content: '\\subsection*{';
+}
+h2:after {
+    content: '} ';
+}
+h3:before {
+    content: '\\subsubsection*{';
+}
+h3:after {
+    content: '} ';
+}
+h4:before {
+    content: '\\paragraph*{';
+}
+h4:after {
+    content: '} ';
+}
+h5:before {
+    content: '\\subparagraph*{';
+}
+h5:after {
+    content: '} ';
+}
+
 ul, ol, dl, li, dt, dd, p {
     margin: 0;
     padding: 0;
@@ -8,6 +54,7 @@ ul, ol, dl, li, dt, dd, p {
 p {
     margin-bottom: 1em;
 }
+
 ul > li, ol > li, dl > dt {
     list-style: none;
 }
