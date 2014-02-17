@@ -15,10 +15,29 @@ body:after {
     content: '\\end{document}';
 }
 
-h1, h2, h3, h4, h5 {
+
+em:before {
+    content: '\\emph{';
+}
+em:after {
+    content: '}';
+}
+strong:before {
+    content: '\\textbf{';
+}
+strong:after {
+    content: '}';
+}
+
+img[src]:before {
+    content: '\\includegraphics{' attr(src) '}';
+}
+
+h1, h2, h3, h4, h5, em, strong {
     text-decoration: inherit;
     font-weight: inherit;
     font-size: inherit;
+    font-style: inherit;
     margin: 0;
     padding: 0;
 }
