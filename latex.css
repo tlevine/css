@@ -8,6 +8,21 @@ ul, ol, dl, li, dt, dd {
 ul > li, ol > li, dl > dt {
     list-style: none;
 }
+ul:before {
+    content: '\\begin{enumerate}';
+}
+ol:before {
+    content: '\\begin{enumerate}';
+}
+ul:after {
+    content: '\\end{itemize}';
+}
+ol:after {
+    content: '\\end{itemize}';
+}
+li:before {
+    content: '\\item ';
+}
 dt:before {
     content: '\\item['
 }
