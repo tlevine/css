@@ -1,0 +1,13 @@
+table {
+    font-family: mono;
+}
+tr {
+    display: block;
+}
+table, thead, tbody, tfoot, td {
+    display: inline;
+}
+table, thead, tbody, tfoot, tr, td {
+    margin: 0;
+    padding: 0;
+}
