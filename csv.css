@@ -11,3 +11,9 @@ table, thead, tbody, tfoot, tr, td {
     margin: 0;
     padding: 0;
 }
+td {
+    margin-right: -0.5em;
+}
+td:nth-child(n+2):before {
+    content: ',';
+}
