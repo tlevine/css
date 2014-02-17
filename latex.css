@@ -1,7 +1,13 @@
 * {
     font-family: mono;
 }
-
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html:before {
+    content: '\\documentclass{article}\\usepackage{graphicx}';
+}
 body:before {
     content: '\\begin{document}';
 }
@@ -53,6 +59,10 @@ ul, ol, dl, li, dt, dd, p {
 }
 p {
     margin-bottom: 1em;
+}
+
+img:before {
+    content: '\\includegraphics
 }
 
 ul > li, ol > li, dl > dt {
