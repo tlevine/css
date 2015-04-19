@@ -1,0 +1,138 @@
+* {
+    font-family: mono;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html:before {
+    content: '\\documentclass{article}';
+}
+body:before {
+    content: '\\begin{document}';
+}
+body:after {
+    content: '\\end{document}';
+}
+
+
+em:before {
+    content: '\\emph{';
+}
+em:after {
+    content: '}';
+}
+strong:before {
+    content: '\\textbf{';
+}
+strong:after {
+    content: '}';
+}
+
+img[src]:before {
+    content: '\\includegraphics{' attr(src) '}';
+}
+
+h1, h2, h3, h4, h5, em, strong {
+    text-decoration: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    margin: 0;
+    padding: 0;
+}
+h1:before {
+    content: '\\section*{';
+}
+h1:after {
+    content: '} ';
+}
+h2:before {
+    content: '\\subsection*{';
+}
+h2:after {
+    content: '} ';
+}
+h3:before {
+    content: '\\subsubsection*{';
+}
+h3:after {
+    content: '} ';
+}
+h4:before {
+    content: '\\paragraph*{';
+}
+h4:after {
+    content: '} ';
+}
+h5:before {
+    content: '\\subparagraph*{';
+}
+h5:after {
+    content: '} ';
+}
+
+ul, ol, dl, li, dt, dd, p {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin-bottom: 1em;
+}
+
+img:before {
+    content: '\\includegraphics
+}
+
+ul > li, ol > li, dl > dt {
+    list-style: none;
+}
+ul:before {
+    content: '\\begin{enumerate}';
+}
+ol:before {
+    content: '\\begin{enumerate}';
+}
+ul:after {
+    content: '\\end{itemize}';
+}
+ol:after {
+    content: '\\end{itemize}';
+}
+li:before {
+    content: '\\item ';
+}
+dt:before {
+    content: '\\item['
+}
+dt:after {
+    content: '] '
+}
+dt, dd {
+    display: inline;
+}
+dl {
+    white-space: pre-line;
+}
+dl:before {
+    content: '\\begin{description}';
+}
+dl:after {
+    content: '\\end{description}';
+}
+table:before {
+    content: '\\begin{tabular}';
+}
+table:after {
+    content: '\\end{tabular}';
+}
+table, thead, tbody, tfoot, tr, td {
+    margin: 0;
+    padding: 0;
+}
+td:nth-child(n+2):before {
+    content: '&';
+}
+td:last-child:after {
+    content: '\\\\';
+}
